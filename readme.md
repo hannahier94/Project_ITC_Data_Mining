@@ -47,8 +47,8 @@ beautifulsoup4~=4.9.0
 
 ## Team
 
-| [![Seb Kleiner](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/hanna/pictures/sebk.jpeg?s=200)    
-| [![Hanna Hier](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/hanna/pictures/hanh.jpeg?s=200) | 
+| [![Seb Kleiner](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/hanna/pictures/sebk.jpeg?s=200)]    
+| [![Hanna Hier](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/hanna/pictures/hanh.jpeg?s=200)] | 
 
 ---
 
