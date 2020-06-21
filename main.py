@@ -9,7 +9,7 @@ def save_file(filename):
     :param filename: Filename to create
     :return: json file
     """
-    with open('result_full.json', 'w') as fp:
+    with open('result.json', 'w') as fp:
         json.dump(filename, fp)
         fp.close()
 
