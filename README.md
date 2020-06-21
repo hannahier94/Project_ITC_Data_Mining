@@ -15,8 +15,6 @@
 - [FAQ](#FAQ)
 - [Requirements](#Requirements)
 
-
->>>>>>> de03b54ae5f088697a64f9e89c97979e59ef0509
 ## Flowchart
 
 ![alt text](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/master/flowchart_webscraper.png?raw=true)
@@ -40,7 +38,7 @@
 - [FAQ](#FAQ)
 - [Requirements](#Requirements)
 
-=======
+
 ---
 ## Badges
 > Warning: The following badges are for display purposes only and may be considered fake news as they do not reflect actual information about this page. 
@@ -52,25 +50,25 @@
 
 - Clone this repo to your local machine using `https://github.com/SebKleiner/Project_ITC_Data_Mining`
 
+---
 ### Requirements
 
+---
 
 requests~=2.23.0 \
 beautifulsoup4~=4.9.0 \
-json5~=0.9.0 \
+json5~=0.9.0 
+
 ---
 
 ## Team
-
-| [![Seb Kleiner](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/hanna/pictures/sebk.jpeg?s=200)    
-| [![Hanna Hier](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/hanna/pictures/hanh.jpeg?s=200) | 
+ 
 =======
 Seb Kleiner: A fresh off the boat Argentinian pursing his life long dream of becoming a Data Scientist in Israel.
 
 Hanna Hier: An aspiring ML Engineer trying to model some sense out of this crazy world.
 
 YOU : The most important part of any project is the receiver! 
->>>>>>> de03b54ae5f088697a64f9e89c97979e59ef0509
 
 ---
 
