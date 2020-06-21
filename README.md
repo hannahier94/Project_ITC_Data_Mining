@@ -4,7 +4,7 @@
 
 > This project will scrape, clean, and analyze this year's top Reddit posts pertaining to data science. 
 
-=======
+
 
 ## Table of Contents
 
@@ -53,8 +53,6 @@
 ---
 ### Requirements
 
----
-
 requests~=2.23.0 \
 beautifulsoup4~=4.9.0 \
 json5~=0.9.0 
@@ -63,7 +61,7 @@ json5~=0.9.0
 
 ## Team
  
-=======
+
 Seb Kleiner: A fresh off the boat Argentinian pursing his life long dream of becoming a Data Scientist in Israel.
 
 Hanna Hier: An aspiring ML Engineer trying to model some sense out of this crazy world.
