@@ -150,5 +150,6 @@ def html_data(urls, user_agent_list, pages, keys):
         forums.append(users)
 
         post_count += len(users['title'])
+
     print(post_count)
     return forums
