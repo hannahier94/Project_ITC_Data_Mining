@@ -147,5 +147,4 @@ def html_data(urls, user_agent_list, pages, keys):
 
         forums.append(users)
 
-    print(post_count)
     return forums
