@@ -17,8 +17,6 @@ def html_data(urls, user_agent_list, pages, keys):
     :return: dictionary with lists containing the information of each key
     """
 
-    post_count = 0
-
     forums = []
 
     for url in urls:
@@ -148,8 +146,6 @@ def html_data(urls, user_agent_list, pages, keys):
             time.sleep(1)
 
         forums.append(users)
-
-        post_count += len(users['title'])
 
     print(post_count)
     return forums
