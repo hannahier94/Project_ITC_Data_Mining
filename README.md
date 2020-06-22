@@ -2,7 +2,7 @@
 
 > An ITC Adventure : By Hanna Hier & Sebastian Kleiner
 
-> What is Israel Tech Challenge? ITC opens the door for talented professionals from Israel and abroad to develop their careers in technology while focusing on the most in-demand skills in tech. Located in a beautiful campus in Tel Aviv, we offer our students intensive tech training in English, inspired by the IDF’s 8200 unit, and job placement assistance to our graduates. To date, we’ve introduced over 500 alumni to the Israeli hi-tech industry.
+> What is **Israel Tech Challenge**? ITC opens the door for talented professionals from Israel and abroad to develop their careers in technology while focusing on the most in-demand skills in tech. Located in a beautiful campus in Tel Aviv, we offer our students intensive tech training in English, inspired by the IDF’s 8200 unit, and job placement assistance to our graduates. To date, we’ve introduced over 500 alumni to the Israeli hi-tech industry.
 
 > This project will scrape, clean, and analyze this year's top Reddit posts pertaining to data science. 
 
