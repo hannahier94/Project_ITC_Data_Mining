@@ -30,17 +30,6 @@
 - The data is deployed on an EC2 instance in AWS
 - Finally, the data is placed in ReDash for BI Analysis
 
-
-## Table of Contents
-
-- [Flowchart](#Flowchart)
-- [Overview](#Overview)
-- [Clone](#Clone)
-- [Team](#Team)
-- [FAQ](#FAQ)
-- [Requirements](#Requirements)
-
-
 ---
 ## Badges
 > Warning: The following badges are for display purposes only and may be considered fake news as they do not reflect actual information about this page. 
