@@ -13,7 +13,7 @@
 - [Flowchart](#Flowchart)
 - [Overview](#Overview)
 - [Introduction](#Introduction)
-- [Getting Started](#Getting Started)
+- [GettingStarted](#GettingStarted)
 - [Clone](#Clone)
 - [Team](#Team)
 - [FAQ](#FAQ)
@@ -50,9 +50,9 @@ You will need your own Reddit account and API credentials for PRAW. See the [Get
 
 ---
 
-## Getting Started
+## GettingStarted
 
-It is very quick and easy to get Reddit API credentials. Refer to [my guide][How to get Reddit API Credentials for PRAW] to get your credentials, then update the configuration dictionary located in `config.json`
+It is very quick and easy to get Reddit API credentials. Refer to https://www.reddit.com/wiki/api to get your credentials, then update the configuration dictionary located in `config.json`
 
 ---
 
