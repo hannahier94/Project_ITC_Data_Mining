@@ -12,6 +12,8 @@
 
 - [Flowchart](#Flowchart)
 - [Overview](#Overview)
+- [Introduction](#Introduction)
+- [Getting Started](#Getting Started)
 - [Clone](#Clone)
 - [Team](#Team)
 - [FAQ](#FAQ)
@@ -32,7 +34,7 @@
 
 ---
 
-# Introduction
+## Introduction
 
 This is a Reddit scraper that can scrape Subreddits. 
 
