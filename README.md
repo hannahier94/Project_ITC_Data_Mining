@@ -31,6 +31,29 @@
 - Finally, the data is placed in ReDash for BI Analysis
 
 ---
+
+# Introduction
+
+This is a Reddit scraper that can scrape Subreddits. 
+
+Written in Python and utilizes the official Reddit API ([ `PRAW` ][PRAW]).
+
+Run `pip install -r requirements.txt` to get all project dependencies (see requirements). 
+
+You will need your own Reddit account and API credentials for PRAW. See the [Getting Started](#getting-started) section for more information. 
+
+***NOTE:*** `PRAW` is currently supported on Python 3.5+. This project was tested with Python 3.6.1. 
+
+**Whether you are using URS for enterprise or personal use, I am very interested in hearing about your use cases and how it has helped you achieve a goal. Please send us an email or leave a note by clicking on the Email! badge. I look forward to hearing from you!**
+
+---
+
+## Getting Started
+
+It is very quick and easy to get Reddit API credentials. Refer to [my guide][How to get Reddit API Credentials for PRAW] to get your credentials, then update the configuration dictionary located in `config.json`
+
+---
+
 ## Badges
 > Warning: The following badges are for display purposes only and may be considered fake news as they do not reflect actual information about this page. 
 
