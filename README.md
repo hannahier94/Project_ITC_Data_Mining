@@ -55,19 +55,13 @@ You will need your own Reddit account and API credentials for PRAW. See the [Get
 It is very quick and easy to get Reddit API credentials. Refer to https://www.reddit.com/wiki/api to get your credentials, then update the configuration dictionary located in `config.json`
 
 ---
+## Clone
 
-## Badges
-> Warning: The following badges are for display purposes only and may be considered fake news as they do not reflect actual information about this page. 
-
-[![Fake Coverage](https://camo.githubusercontent.com/3eff610e3559385c77a9b6d87cbe1252cab79a4d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f7665726167652d38302532352d79656c6c6f77677265656e)](https://travis-ci.org/badges/badgerbadgerbadger)  [![A Fake Rating](https://camo.githubusercontent.com/d5cd29c0e2930c3c4026ba87ff427e2e340f461b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f726174696e672d2545322539382538352545322539382538352545322539382538352545322539382538352545322539382538362d627269676874677265656e)](https://travis-ci.org/badges/badgerbadgerbadger)  [![A Fake 3rd Thing](https://camo.githubusercontent.com/b3fc74878a0d5fcca5a78b288aa4b489f65fd7eb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f757074696d652d3130302532352d627269676874677265656e)](https://travis-ci.org/badges/badgerbadgerbadger)
+Clone this repo to your local machine using `https://github.com/SebKleiner/Project_ITC_Data_Mining`
 
 ---
-### Clone
 
-- Clone this repo to your local machine using `https://github.com/SebKleiner/Project_ITC_Data_Mining`
-
----
-### Requirements
+## Requirements
 
 beautifulsoup4==4.9.1 \
 logger==1.4 \
@@ -76,7 +70,30 @@ nltk==3.5 \
 pandas==1.0.3 \
 requests==2.24.0 \
 pip~=20.1.1 \
-setuptools~=46.1.3
+setuptools~=46.1.3 \
+fake_useragent==0.1.11 \ 
+praw~=7.1.0 \
+
+---
+
+## Usage
+
+Welcome to the Reddit Web Scraper! The default list to scrape is: ['DataScience', 'MachineLearning']
+
+Go to your python command line inside the cloned folder and type: python main.py default --console=INFO as a default run.
+
+For new reddit information added to the default list search, change 'default' for 'add' as a single word (ex: datascience instead of data science).
+
+'custom' option let the user define which topics he wants to scrape avoiding default ones.
+
+For details, please type -help in the argparse.
+
+---
+
+## Badges
+> Warning: The following badges are for display purposes only and may be considered fake news as they do not reflect actual information about this page. 
+
+[![Fake Coverage](https://camo.githubusercontent.com/3eff610e3559385c77a9b6d87cbe1252cab79a4d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f7665726167652d38302532352d79656c6c6f77677265656e)](https://travis-ci.org/badges/badgerbadgerbadger)  [![A Fake Rating](https://camo.githubusercontent.com/d5cd29c0e2930c3c4026ba87ff427e2e340f461b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f726174696e672d2545322539382538352545322539382538352545322539382538352545322539382538352545322539382538362d627269676874677265656e)](https://travis-ci.org/badges/badgerbadgerbadger)  [![A Fake 3rd Thing](https://camo.githubusercontent.com/b3fc74878a0d5fcca5a78b288aa4b489f65fd7eb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f757074696d652d3130302532352d627269676874677265656e)](https://travis-ci.org/badges/badgerbadgerbadger)
 
 ---
 
