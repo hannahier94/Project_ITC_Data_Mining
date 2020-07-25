@@ -18,7 +18,6 @@
 - [Requirements](#Requirements)
 - [Usage](#Usage)
 - [UserInputs](#UserInputs)
-- [Badges] (#Badges)
 - [Team](#Team)
 - [FAQ](#FAQ)
 
