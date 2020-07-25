@@ -71,7 +71,7 @@ pandas==1.0.3 \
 requests==2.24.0 \
 pip~=20.1.1 \
 setuptools~=46.1.3 \
-fake_useragent==0.1.11 \ 
+fake_useragent==0.1.11 \
 praw~=7.1.0
 
 ---
