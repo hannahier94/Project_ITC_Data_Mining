@@ -38,7 +38,7 @@
 
 This is a Reddit scraper that can scrape Subreddits. 
 
-Written in Python and utilizes the official Reddit API ([ `PRAW` ][PRAW]).
+Written in Python and utilizes the official Reddit API `PRAW`.
 
 Run `pip install -r requirements.txt` to get all project dependencies (see requirements). 
 
