@@ -15,9 +15,12 @@
 - [Introduction](#Introduction)
 - [GettingStarted](#GettingStarted)
 - [Clone](#Clone)
+- [Requirements](#Requirements)
+- [Usage](#Usage)
+- [UserInputs](#UserInputs)
+- [Badges] (#Badges)
 - [Team](#Team)
 - [FAQ](#FAQ)
-- [Requirements](#Requirements)
 
 ## Flowchart
 
@@ -89,6 +92,16 @@ For new reddit information added to the default list search, change 'default' fo
 For details, please type -help in the argparse.
 
 ---
+
+## UserInputs
+
+param1=default : default , add , custom (option to add or customize topics to parse)
+--topics=None : (each topic to be added / customized should be added seperately)
+--c / --console=False : 'False', 'DEBUG', 'INFO', 'WARNING', 'ERROR' (option to set console logger level)
+--s / --sleep=1 : 0, 1, 2 (option to set sleep time between URLs)
+
+---
+
 
 ## Badges
 > Warning: The following badges are for display purposes only and may be considered fake news as they do not reflect actual information about this page. 
