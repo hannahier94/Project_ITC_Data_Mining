@@ -56,6 +56,8 @@ You will need your own Reddit account and API credentials for PRAW. See the [Get
 
 It is very quick and easy to get Reddit API credentials. Refer to https://www.reddit.com/wiki/api to get your credentials, then update the configuration dictionary located in `config.json`
 
+Please, notice that in the `config.json` you will need to provide your mysql and Reddit credentials (mysql: username, localhost and password - Reddit: clientname, cliensecret and username).
+
 ---
 ## Clone
 
