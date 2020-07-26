@@ -1,3 +1,7 @@
+"""
+Function to create, update and commit databases to SQL
+"""
+
 
 from dbuild import DbBuild
 from utils import utils
@@ -104,7 +108,10 @@ class TableUpdater(DbBuild):
         self.logger.info('Catalogue updated')
 
     def __update_ids(self):
-
+        """
+        Updates ids for each table to commit into DB
+        :return: -
+        """
         for table in self.res['IDS'].keys():
             self.logger.info('Working on table {}'.format(table))
             i = utils['MAGIC_ZERO']
@@ -123,7 +130,10 @@ class TableUpdater(DbBuild):
             self.__commit_db()
 
     def __update_others(self):
-
+        """
+        Update function of posts, catalogue and search
+        :return: -
+        """
         NON_ID_TABLES = {
             "POSTS": "internal_id",
             "CAT": "id",
@@ -155,13 +165,21 @@ class TableUpdater(DbBuild):
             self.__commit_db()
 
     def __get_apiinfo(self):
+        """
+        Open json data from API and call the update api function
+        :return: -
+        """
         filename = utils['API_FILE'] + utils["EXTENSION"]
         with open(filename, 'r') as file:
             data = json.load(file)
             self.__update_apitable(data)
 
     def __update_apitable(self, list_data):
-
+        """
+        Function to update API table in SQL
+        :param list_data: list of API information
+        :return: -
+        """
         self.API_TABLE = utils['API']
         id_col = utils['API_KEYS'][utils['MAGIC_ZERO']]
         self.logger.info('Working on table {}'.format(self.API_TABLE))

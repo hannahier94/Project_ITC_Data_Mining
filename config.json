@@ -39,21 +39,21 @@
 
   "SEPERATOR" : "_",
 
-  "HOST": "127.0.0.1",
+  "HOST": "localhost",
 
-  "USER": "sdkleiner",
+  "USER": "username",
 
-  "PASS": "peter830GO",
+  "PASS": "password",
 
   "DB": "reddit",
 
   "MARKER" : "t3",
 
-  "REDDIT_CLIENT": "RHt-HYqflVTqpA",
+  "REDDIT_CLIENT": "redditclient",
 
-  "REDDIT_SECRET": "AEJLHNr_4XpAHwJotWTLe6uT1NU",
+  "REDDIT_SECRET": "redditsecret",
 
-  "REDDIT_USER": "sdkleiner",
+  "REDDIT_USER": "reddituser",
 
   "API_FILE" : "api_results",
 

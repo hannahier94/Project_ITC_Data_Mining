@@ -1,3 +1,6 @@
+"""
+Function to create connection to SQL and table creation
+"""
 import mysql.connector
 from utils import utils
 
@@ -40,7 +43,7 @@ class DbBuild:
         self.logger.info("\n*** Connection was created successfully. ***\n")
 
     def create_tables(self):
-
+        """Create table statements"""
         for statement in ''.join(utils['CREATE_TABLE_STATEMENTS']).split(';'):
             try:
                 self.cursor.execute(statement)
@@ -52,11 +55,8 @@ class DbBuild:
         self.db.commit()
         self.logger.info("\n*** Created tables successfully ***\n")
 
-    def test(self):
-        for r in self.res:
-            print(r)
-
     def close_db(self):
+        """Close mysql DB connection"""
         try:
             self.cursor.close()
             self.db.close()
@@ -65,7 +65,7 @@ class DbBuild:
             self.logger.info("\n*** Connection to MySQL did not succeed {}. ***\n".format(err))
 
     def alter_tables(self):
-
+        """Alter Table statements for foreign keys"""
         for statement in ''.join(utils['ALTER_TABLE_STATEMENTS']).split(';'):
             try:
                 self.cursor.execute(statement)
@@ -78,6 +78,8 @@ class DbBuild:
         self.logger.info("\n*** Created tables successfully ***\n")
 
     def check_tables(self):
+        """Checking tables"""
+
         IDS = ['THREADS', 'TAGS', 'POSTYPE', 'AUTHORS']
 
         db_ids = {k: [] for k in IDS}
