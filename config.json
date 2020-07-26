@@ -1,1 +1,208 @@
-{"URLS": ["MachineLearning", "DataScience"], "POST_KEYS": ["postid", "tag", "domain_tag", "title", "awards", "author", "comments", "scorelikes", "scoredislikes", "author_info", "dates", "thread", "spoilers", "promoted", "crossposts", "postype", "titlescore"], "CREATE_TABLE_STATEMENTS": ["CREATE TABLE IF NOT EXISTS search (search_id INT NOT NULL,\n                                                  tag VARCHAR(255) NOT NULL,\n                                                  date VARCHAR(255) NOT NULL,\n                                                  UNIQUE bucket (search_id, tag),\n                                                  PRIMARY KEY(tag));", "CREATE TABLE IF NOT EXISTS posts (post_id VARCHAR(255) NOT NULL,\n                                                   tag VARCHAR (255) NOT NULL,\n                                                   domain_tag VARCHAR (255) NOT NULL,\n                                                   title VARCHAR(255) NOT NULL,\n                                                   awards INT NOT NULL,\n                                                   author VARCHAR(255) NOT NULL,\n                                                   author_info VARCHAR(255) NOT NULL,\n                                                   comments VARCHAR(255) NOT NULL,\n                                                   scorelikes VARCHAR(255) NOT NULL,\n                                                   scoredislikes VARCHAR(255) NOT NULL,\n                                                   dates VARCHAR(255) NOT NULL,\n                                                   thread VARCHAR(255) NOT NULL,\n                                                   spoilers VARCHAR(255) NOT NULL,\n                                                   promoted BIT NOT NULL,\n                                                   crossposts INTEGER NOT NULL,\n                                                   postype VARCHAR(255) NOT NULL,\n                                                   titlescore INT NOT NULL,\n                                                   UNIQUE(post_id),\n                                                   PRIMARY KEY(post_id),\n                                                   FOREIGN KEY (tag) REFERENCES search(tag));"], "MAGIC_ZERO": 0, "MAGIC_ONE": 1, "MAGIC_TWO": 2, "MAGIC_THREE": 255, "HOST": "XXX", "USER": "XXX", "PASS": "XXX", "DB": "reddit"}
+{"URLS": ["MachineLearning", "DataScience"],
+
+  "POST_KEYS": ["internal_id", "site_id", "tag", "title", "awards",
+    "author", "comments", "scorelikes", "scoredislikes", "dates",
+    "thread", "spoilers", "promoted", "crossposts", "postype", "titlescore"],
+
+  "API_KEYS": ["site_id", "topic", "flair", "original_content", "edited", "locked", "nsfw",
+    "distinguished", "spoiler", "stickied", "created"],
+
+  "API": "api",
+
+  "MAGIC_ZERO": 0,
+
+  "MAGIC_ONE": 1,
+
+  "MAGIC_TWO": 2,
+
+  "MAGIC_THREE": 3,
+
+  "MAGIC_TITLE": 255,
+
+  "MAGIC_NUMBER_API" : 1000,
+
+  "MAGIC_DATE_CONVERTER" : 1e9,
+
+  "COMMIT_NUM": 100,
+
+  "INSERT_FORMATTER" :  "INSERT INTO {} ({}) VALUES ({});",
+
+  "INSERT_PLACEHOLDER" : "%s",
+
+  "INSERT_SEPERATOR" : ", ",
+
+  "UUID_LEN": 6,
+
+  "POOL" : 4,
+
+  "EXTENSION" : ".json",
+
+  "SEPERATOR" : "_",
+
+  "HOST": "127.0.0.1",
+
+  "USER": "sdkleiner",
+
+  "PASS": "peter830GO",
+
+  "DB": "reddit",
+
+  "MARKER" : "t3",
+
+  "REDDIT_CLIENT": "RHt-HYqflVTqpA",
+
+  "REDDIT_SECRET": "AEJLHNr_4XpAHwJotWTLe6uT1NU",
+
+  "REDDIT_USER": "sdkleiner",
+
+  "API_FILE" : "api_results",
+
+  "MAP_IDS" : {"post_id": "internal_id",
+        "thread_id": "thread",
+        "author_id": "author",
+        "postype_id": "postype"},
+  
+  "POSTS_MAP" : {
+    "id": "internal_id",
+    "site_id": "site_id",
+    "awards": "awards",
+    "comments": "comments",
+    "scorelikes": "scorelikes",
+    "post_date": "dates",
+    "promoted": "promoted",
+    "titlescore": "titlescore",
+    "crossposts": "crossposts"
+},
+    "TABLE_ID_MAP" :{"THREADS": "thread_id",
+                    "TAGS": "tag_id",
+                    "POSTYPE": "postype_id",
+                    "AUTHORS": "author_id"},
+
+  "TABLES": {
+   "CAT": [
+     "id",
+     "post_id",
+     "search_id",
+     "thread_id",
+     "author_id",
+     "postype_id"
+   ],
+   "POSTS": [
+     "id",
+     "site_id",
+     "tag",
+     "search",
+     "awards",
+     "comments",
+     "scorelikes",
+     "scoredislikes",
+     "post_date",
+     "promoted",
+     "crossposts"
+   ],
+   "POSTYPE": [
+     "id",
+     "type"
+   ],
+   "SEARCH": [
+     "id",
+     "tag_id",
+     "date"
+   ],
+   "TAGS": [
+     "id",
+     "name"
+   ],
+   "THREADS": [
+     "id",
+     "name"
+   ],
+  "TITLE" : [
+    "id",
+    "title_info"
+   ],
+   "AUTHORS": [
+     "id",
+     "web_id"
+   ]
+  },
+  "CREATE_TABLE_STATEMENTS":[
+   "CREATE TABLE IF NOT EXISTS cat (",
+ " id varchar(255) PRIMARY KEY,",
+ " post_id varchar(255) UNIQUE,",
+ " search_id varchar(255),",
+ " thread_id int,",
+ " author_id int,",
+ " postype_id int);",
+
+ "CREATE TABLE IF NOT EXISTS title (",
+ " id varchar(255) PRIMARY KEY,",
+ " title_info TEXT NOT NULL);",
+
+"CREATE TABLE IF NOT EXISTS posts(",
+"  internal_id varchar(255) PRIMARY KEY,",
+"  site_id varchar(255) UNIQUE,",
+"  awards int,",
+"  comments int,",
+"  scorelikes int,",
+"  scoredislikes int,",
+"  dates varchar(255),",
+"  promoted boolean,",
+"  titlescore int,",
+"  crossposts int);",
+
+"CREATE TABLE IF NOT EXISTS postype (",
+"  id int PRIMARY KEY,",
+"  type varchar(255) UNIQUE);",
+
+"CREATE TABLE IF NOT EXISTS search (",
+"  id varchar(255) PRIMARY KEY,",
+"  tag_id bigint,",
+"  date varchar(255));",
+
+" CREATE TABLE IF NOT EXISTS tags (",
+"  id bigint PRIMARY KEY,",
+"  name varchar(255) UNIQUE);",
+
+"CREATE TABLE IF NOT EXISTS threads (",
+"  id int PRIMARY KEY,",
+"  name varchar(767) UNIQUE);",
+
+"CREATE TABLE IF NOT EXISTS authors (",
+"  id int PRIMARY KEY,",
+"  web_id varchar(255) UNIQUE);",
+
+  "CREATE TABLE IF NOT EXISTS api (",
+ " site_id varchar(255) PRIMARY KEY,",
+ " topic varchar(255),",
+ " flair varchar(255),",
+ " original_content boolean,",
+ " edited varchar(255),",
+ " locked boolean,",
+ " nsfw boolean,",
+ " distinguished varchar(255),",
+ " spoiler boolean,",
+ " stickied boolean,",
+ " created varchar(255));"],
+
+"ALTER_TABLE_STATEMENTS": [
+
+"ALTER TABLE cat ADD FOREIGN KEY (post_id) REFERENCES posts (internal_id);",
+
+"ALTER TABLE cat ADD FOREIGN KEY (search_id) REFERENCES search (id);",
+
+"ALTER TABLE cat ADD FOREIGN KEY (thread_id) REFERENCES threads (id);",
+
+"ALTER TABLE cat ADD FOREIGN KEY (author_id) REFERENCES authors (id);",
+
+"ALTER TABLE cat ADD FOREIGN KEY (postype_id) REFERENCES postype(id);",
+
+"ALTER TABLE search ADD FOREIGN KEY (tag_id) REFERENCES tags (id);",
+
+"ALTER TABLE title ADD FOREIGN KEY (id) REFERENCES posts (internal_id);",
+
+"ALTER TABLE api ADD FOREIGN KEY (site_id) REFERENCES posts (site_id);"
+  ]
+
+}
+

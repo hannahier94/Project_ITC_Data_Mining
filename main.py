@@ -2,8 +2,9 @@ import sys
 from htmls import Htmls
 from user_args import parse_args, UserInputs
 from logsetup import get_module_logger
+from getapi import Apiget
 import savefile as savefile
-from dbuild import DbBuild
+from table_updater import TableUpdater
 sys.path.append('../')
 
 
@@ -18,8 +19,9 @@ def main():
     topics = user_input.apply_func()
     posts = Htmls(topics, user_input.sleep)
     res = posts.get_html_data(logger)
+    Apiget(logger, topics=topics).get_out()
     savefile.save_file(res)
-    DbBuild(res, logger)
+    TableUpdater(res, logger)
 
 
 if __name__ == '__main__':

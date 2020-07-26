@@ -27,10 +27,10 @@ class Users(Parser):
         try:
             self.logger = log
             self.__user_page = re.findall('(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+',
-                       str(self.post.find('a', class_='author')))[MAGIC_ZERO]
+                                          str(self.post.find('a', class_='author')))[MAGIC_ZERO]
             Parser.__init__(self, [self.__user_page], keys=USER_KEYS)
 
-            self.__usoup = self.get_info(self.__user_page, logger= self.logger, posts=False)
+            self.__usoup = self.get_info(self.__user_page, logger=self.logger, posts=False)
             if self.__user_page not in self.__cache:
                 self.__cache.append(self.__user_page)
                 return self.__parse_user_info()

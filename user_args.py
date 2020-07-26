@@ -73,7 +73,8 @@ def parse_args():
                         add: keep default topics and add your own, \n
                         custom: provide your own topics to search.''')
 
-    parser.add_argument("-s", "--sleep", type=int, choices=[utils['MAGIC_ZERO'], utils['MAGIC_ONE'], utils['MAGIC_TWO']], default= utils['MAGIC_ONE'],
+    parser.add_argument("-s", "--sleep", type=int, choices=[utils['MAGIC_ZERO'], utils['MAGIC_ONE'],
+                                                            utils['MAGIC_TWO']], default=utils['MAGIC_ONE'],
                         help="Choose seconds to sleep, default = {} (recommended)".format(utils['MAGIC_ONE']))
 
     parser.add_argument("-c", "--console", default='False', choices=['False', 'DEBUG', 'INFO', 'WARNING', 'ERROR'],

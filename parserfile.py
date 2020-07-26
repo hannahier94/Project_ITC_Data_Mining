@@ -8,8 +8,10 @@ import requests
 import random
 from agents import get_user_agent
 from utils import utils
-
+import uuid
+import datetime
 MAGIC_ONE = utils['MAGIC_ONE']
+
 
 class Parser:
     
@@ -18,11 +20,14 @@ class Parser:
     
     def __init__(self, urls, keys=utils['POST_KEYS'], postlim=None, totallim=None, sleeptime=utils['MAGIC_ONE']):
         """ Initialize parser class """
+        self.topics = urls
         self.urls = [self.FRONT + url + self.BACK for url in urls]
         self.keys = keys
         self.postlim = postlim
         self.totallim = totallim
         self.sleeptime = sleeptime
+        self.search = {k: [] for k in utils['TABLES']['SEARCH']}
+        self.search_info = self.__search_params()
 
     def get_info(self, url, logger, posts=True):
         """ Set up for beautiful soup """
@@ -39,6 +44,7 @@ class Parser:
             return soup, posts
         else:
             return soup
+
     def proxies_pool(self):
         """ Create proxies for search """
         
@@ -70,3 +76,17 @@ class Parser:
             unfinished = False
 
         return url, unfinished
+
+    def __search_params(self):
+        for topic in self.topics:
+            self.current_searchid = str(uuid.uuid4())[:utils['UUID_LEN']]
+
+            yield (self.current_searchid, topic, str(datetime.datetime.now().time()))
+
+    def update_search_dict(self, current_url):
+
+        identifier, topic, time = next(self.search_info)
+
+        self.search['id'].append(identifier)
+        self.search['tag_id'].append(topic)
+        self.search['date'].append(time)

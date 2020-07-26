@@ -6,6 +6,11 @@ import logging
 
 
 def get_module_logger(console=False):
+    """
+    Function to create logger
+    :param console: Parameter to obtain or not the logger information on console
+    :return: logger information
+    """
     logger = logging.getLogger(__name__)
     file_handler = logging.FileHandler('full.log')
     formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s:%(message)s',
