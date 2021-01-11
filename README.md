@@ -4,7 +4,6 @@
 
 > This project will scrape, clean, and analyze this year's top Reddit posts pertaining to data science. 
 
-<<<<<<< HEAD
 =======
 
 ## Table of Contents
@@ -17,7 +16,6 @@
 - [Requirements](#Requirements)
 
 
->>>>>>> de03b54ae5f088697a64f9e89c97979e59ef0509
 ## Flowchart
 
 ![alt text](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/master/flowchart_webscraper.png?raw=true)
@@ -32,7 +30,6 @@
 - Finally, the data is placed in ReDash for BI Analysis
 
 
-<<<<<<< HEAD
 ## Table of Contents
 
 - [Flowchart](#Flowchart)
@@ -64,27 +61,29 @@
 
 ### Requirements
 
-<<<<<<< HEAD
-requests~=2.23.0
-=======
-requests~=2.23.0 \
->>>>>>> de03b54ae5f088697a64f9e89c97979e59ef0509
-beautifulsoup4~=4.9.0
+beautifulsoup4==4.9.1
+logger==1.4
+mysql==0.0.2
+nltk==3.5
+pandas==1.0.3
+requests==2.24.0
+pip~=20.1.1
+setuptools~=46.1.3
+fake_useragent==0.1.11
+praw~=7.1.0
 
 ---
 
 ## Team
 
-<<<<<<< HEAD
 | [![Seb Kleiner](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/hanna/pictures/sebk.jpeg?s=200)    
-| [![Hanna Hier](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/hanna/pictures/hanh.jpeg?s=200) | 
-=======
+| [![Hanna Hier](https://github.com/SebKleiner/Project_ITC_Data_Mining/blob/hanna/pictures/hanh.jpeg?s=200) 
+
 Seb Kleiner: A fresh off the boat Argentinian pursing his life long dream of becoming a Data Scientist in Israel.
 
 Hanna Hier: An aspiring ML Engineer trying to model some sense out of this crazy world.
 
 YOU : The most important part of any project is the receiver! 
->>>>>>> de03b54ae5f088697a64f9e89c97979e59ef0509
 
 ---
 
